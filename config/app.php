@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
+        //Dompdf
+        Barryvdh\DomPDF\ServiceProvider::class,
+
 
 
     ],
@@ -228,6 +231,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        //DomPdf
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 
