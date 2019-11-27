@@ -5,11 +5,13 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Caffeinated\Shinobi\Concerns\HasRolesAndPermissions;
 use App\Notifications\UserResetPassword;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use HasRolesAndPermissions;
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +19,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'users' , 'email', 'password',
+        'usuario',
+        'email',
+        'password',
+        'avatar',
+        'situacion',
+        'status',
     ];
 
     /**
